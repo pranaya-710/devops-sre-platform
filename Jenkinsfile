@@ -33,7 +33,7 @@ pipeline{
          
         script{
 
-            def containerName = "devops-test-$(env.BUILD_NUMBER)"
+            def containerName = "devops-test-${env.BUILD_NUMBER}"
 
             try {
 
