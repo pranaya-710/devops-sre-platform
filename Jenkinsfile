@@ -39,7 +39,7 @@ pipeline{
 
                 bat "docker run -d --name ${containerName} devops-platform1:${env.BUILD_NUMBER}"
 
-                bat 'timeout /t /3 /nobreak >nul'
+                bat 'timeout /t 3 /nobreak >nul'
 
                 bat """
 
