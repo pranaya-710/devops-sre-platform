@@ -1,0 +1,22 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-api
+  namespace: devops-sre
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devops-api
+  template:
+    metadata:
+      labels:
+        app: devops-api
+    spec:
+      containers:
+        - name: devops-api
+          image: pranaya710/devops-sre:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
